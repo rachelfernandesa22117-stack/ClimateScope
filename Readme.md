@@ -36,3 +36,19 @@ This helped me observe variability, skewness, and general data spread across key
 </p>
 
 <hr>
+
+<h2>3. Correlation Analysis</h2>
+<p>I computed a correlation matrix using:</p>
+<ul>
+  <li>Temperature</li>
+  <li>Humidity</li>
+  <li>Wind Speed</li>
+  <li>Pressure</li>
+  <li>PM2.5</li>
+</ul>
+<p>
+I visualized these relationships using a heatmap to clearly identify positive and negative correlations.
+Additionally, I created a scatter plot (Temperature vs PM2.5) with an OLS trendline, which showed a weak but noticeable relationship between temperature and air quality levels.
+</p>
+
+<hr>
