@@ -1,6 +1,6 @@
 <h1>Milestone 2: Core Analysis & Visualization Design</h1>
 <h3>Project: ClimateScope – Visualizing Global Weather Trends</h3>
-<p><strong>Author:</strong> Rachel</p>
+<p><strong>Author:</strong> RachelFernandes</p>
 
 <hr>
 
@@ -24,3 +24,15 @@ This allowed me to perform structured seasonal and trend analysis.
 
 <hr>
 
+<h2>2. Distribution Analysis</h2>
+<p>I created histograms to understand the distribution of:</p>
+<ul>
+  <li>Temperature</li>
+  <li>Humidity</li>
+  <li>PM2.5</li>
+</ul>
+<p>
+This helped me observe variability, skewness, and general data spread across key environmental variables.
+</p>
+
+<hr>
