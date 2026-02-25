@@ -78,3 +78,16 @@ This comparison clearly highlighted geographic climate differences.
 
 <hr>
 
+<h2>6. Extreme Weather Event Identification</h2>
+<p>I defined extreme thresholds using percentile-based methods:</p>
+<ul>
+  <li>Top 5% temperature → Extreme Heat</li>
+  <li>Bottom 5% temperature → Extreme Cold</li>
+  <li>Top 5% PM2.5 → Extreme Pollution</li>
+</ul>
+<p>
+Using quantiles allowed me to detect extreme events dynamically and ensured that the classification was statistically justified.
+</p>
+
+<hr>
+
