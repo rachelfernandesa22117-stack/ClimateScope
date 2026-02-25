@@ -48,7 +48,33 @@ This helped me observe variability, skewness, and general data spread across key
 </ul>
 <p>
 I visualized these relationships using a heatmap to clearly identify positive and negative correlations.
-Additionally, I created a scatter plot (Temperature vs PM2.5) with an OLS trendline, which showed a weak but noticeable relationship between temperature and air quality levels.
+Additionally, I created a scatter plot (Temperature vs PM2.5) with an OLS trendline.
 </p>
 
 <hr>
+
+<h2>4. Seasonal Pattern Analysis</h2>
+<p>I calculated monthly averages for:</p>
+<ul>
+  <li>Temperature</li>
+  <li>Humidity</li>
+</ul>
+<p>
+I used line charts to highlight seasonal fluctuations and observe recurring patterns across months.
+</p>
+
+<hr>
+
+<h2>5. Regional Comparison</h2>
+<p>I computed country-level averages to compare climate conditions across regions.</p>
+<ul>
+  <li>Identified the top 10 hottest countries based on mean temperature.</li>
+  <li>Identified the top 10 coldest countries.</li>
+  <li>Analyzed country-wise PM2.5 averages to determine regions with higher pollution levels.</li>
+</ul>
+<p>
+This comparison clearly highlighted geographic climate differences.
+</p>
+
+<hr>
+
