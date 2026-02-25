@@ -91,3 +91,15 @@ Using quantiles allowed me to detect extreme events dynamically and ensured that
 
 <hr>
 
+<h2>7. Visualization Design Choices</h2>
+<ul>
+  <li><strong>Choropleth Map</strong> → To display geographic patterns</li>
+  <li><strong>Line Charts</strong> → To represent seasonal trends</li>
+  <li><strong>Histograms</strong> → To analyze distributions</li>
+  <li><strong>Scatter Plot with Trendline</strong> → To examine relationships</li>
+  <li><strong>Heatmap</strong> → To summarize correlations</li>
+  <li><strong>Bar Charts</strong> → To compare regional rankings and extremes</li>
+</ul>
+
+<hr>
+
