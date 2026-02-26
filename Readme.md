@@ -1,6 +1,6 @@
 <h1>Milestone 2: Core Analysis & Visualization Design</h1>
 <h3>Project: ClimateScope – Visualizing Global Weather Trends</h3>
-<p><strong>Author:</strong> RachelFernandes</p>
+<p><strong>Author:</strong> Rachel Fernandes</p>
 
 <hr>
 
