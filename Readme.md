@@ -4,6 +4,14 @@
 
 <hr>
 
+<ul>
+  <li>Performed statistical exploration of the dataset</li>
+  <li>Identified seasonal climate trends</li>
+  <li>Analyzed regional differences</li>
+  <li>Detected extreme weather events using percentile thresholds</li>
+  <li>Designed a visualization strategy aligned with analytical findings</li>
+</ul>
+
 <h2>1. Data Preparation</h2>
 <p>
 I began by loading the Global Weather Repository dataset and selecting the most relevant variables, including:
@@ -91,15 +99,21 @@ Using quantiles allowed me to detect extreme events dynamically and ensured that
 
 <hr>
 
-<h2>7. Visualization Design Choices</h2>
-<ul>
-  <li><strong>Choropleth Map</strong> → To display geographic patterns</li>
-  <li><strong>Line Charts</strong> → To represent seasonal trends</li>
-  <li><strong>Histograms</strong> → To analyze distributions</li>
-  <li><strong>Scatter Plot with Trendline</strong> → To examine relationships</li>
-  <li><strong>Heatmap</strong> → To summarize correlations</li>
-  <li><strong>Bar Charts</strong> → To compare regional rankings and extremes</li>
-</ul>
+<h2>7. Dashboard Layout Plan</h2>
+<ol>
+  <li>Key weather indicators (summary metrics)</li>
+  <li>Global geographic overview</li>
+  <li>Distribution analysis</li>
+  <li>Seasonal trends</li>
+  <li>Correlation analysis</li>
+  <li>Regional comparison</li>
+  <li>Extreme events summary</li>
+  <li>Country deep dive</li>
+</ol>
+
+<p>
+I will incorporate interactive filters to allow users to explore data by country, month, and percentile thresholds.
+</p>
 
 <hr>
 
