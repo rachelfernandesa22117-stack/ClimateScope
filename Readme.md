@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Milestone 2 - ClimateScope</title>
-</head>
-<body>
-
 <h1>Milestone 2: Core Analysis & Visualization Design</h1>
 <h3>Project: ClimateScope – Visualizing Global Weather Trends</h3>
 <p><strong>Author:</strong> Rachel Fernandes</p>
