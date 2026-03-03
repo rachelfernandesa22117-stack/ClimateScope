@@ -1,9 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ClimateScope - Milestone 2</title>
+</head>
+<body>
+
 <h1>Milestone 2: Core Analysis & Visualization Design</h1>
+
 <h3>Project: ClimateScope – Visualizing Global Weather Trends</h3>
+
 <p><strong>Author:</strong> Rachel Fernandes</p>
 
 <hr>
 
+<h2>Work Completed</h2>
 <ul>
   <li>Performed statistical exploration of the dataset</li>
   <li>Identified seasonal climate trends</li>
@@ -11,8 +21,6 @@
   <li>Detected extreme weather events using percentile thresholds</li>
   <li>Designed a visualization strategy aligned with analytical findings</li>
 </ul>
-
-
 
 <h2>Dashboard Layout Plan</h2>
 <ol>
@@ -27,8 +35,16 @@
 </ol>
 
 <p>
-I will incorporate interactive filters to allow users to explore data by country, month, and percentile thresholds.
+Interactive filters will be added to allow users to explore data by:
 </p>
+
+<ul>
+  <li>Country</li>
+  <li>Month</li>
+  <li>Percentile thresholds</li>
+</ul>
 
 <hr>
 
+</body>
+</html>
