@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>ClimateScope - Milestone 2</title>
-</head>
-<body>
+# Milestone 1 – ClimateScope Project Submission
+
+## Project Status
+- Dataset successfully downloaded  
+- Data cleaned and standardized  
+- Missing values inspected  
+- Dataset aggregated  
+- Ready for visualization using Plotly & Streamlit  
+
+---
+
+**Author:** Rachel Fernandes
 
 <h1>Milestone 2: Core Analysis & Visualization Design</h1>
-
 <h3>Project: ClimateScope – Visualizing Global Weather Trends</h3>
-
 <p><strong>Author:</strong> Rachel Fernandes</p>
 
 <hr>
 
-<h2>Work Completed</h2>
 <ul>
   <li>Performed statistical exploration of the dataset</li>
   <li>Identified seasonal climate trends</li>
@@ -35,14 +38,8 @@
 </ol>
 
 <p>
-Interactive filters will be added to allow users to explore data by:
+I will incorporate interactive filters to allow users to explore data by country, month, and percentile thresholds.
 </p>
-
-<ul>
-  <li>Country</li>
-  <li>Month</li>
-  <li>Percentile thresholds</li>
-</ul>
 
 <hr>
 
