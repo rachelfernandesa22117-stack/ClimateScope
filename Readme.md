@@ -1,5 +1,5 @@
 ## ClimateScope Project Milestones
-Author: Rachel Fernandes
+**Author: Rachel Fernandes**
 
 
 
