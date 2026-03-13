@@ -17,20 +17,20 @@ Author: Rachel Fernandes
 ## Milestone 2 – Core Analysis and Visualization Design
 
 ### Tasks Completed
-- Built an interactive Streamlit dashboard for global weather analytics
+- Built a Streamlit dashboard for global weather analytics
 - Loaded and cleaned the weather dataset using Pandas
-- Performed data preprocessing including date parsing, numeric conversion, and missing value handling
-- Created KPI indicators for temperature, humidity, wind speed, pressure, UV index, and visibility
+- Performed data preprocessing including date parsing, numeric conversion and missing value handling
+- Created KPI indicators for temperature, humidity, wind speed, pressure, UV index and visibility
 - Visualized global temperature using a choropleth world map
 - Built distribution charts (histograms) for major weather variables
-- Analyzed seasonal patterns with monthly wind, temperature, and UV charts
+- Analyzed seasonal patterns with monthly wind, temperature and UV charts
 - Generated a correlation matrix and scatter plots to study relationships between variables
 - Compared regional climate patterns including hottest and coldest countries and wind distributions
 - Conducted air quality analysis for PM2.5 and PM10 pollutants
 - Detected extreme weather events using percentile thresholds
 - Implemented anomaly detection using Z-Score and IQR statistical methods
 - Analyzed visibility and cloud cover relationships
-- Built rolling average trend analysis for temperature, wind, and pollution
+- Built rolling average trend analysis for temperature, wind and pollution
 - Designed a multi-section analytical dashboard using Plotly visualizations
 
 
@@ -39,7 +39,7 @@ Author: Rachel Fernandes
 
 ### Visualization Development
 - Choropleth world map showing average temperature by country
-- Histograms for temperature, humidity, wind speed, pressure, UV index, and visibility distributions
+- Histograms for temperature, humidity, wind speed, pressure, UV index and visibility distributions
 - Seasonal trend visualizations including monthly line charts and box plots
 - Heatmaps comparing temperature patterns across countries and months
 - Correlation matrix to analyze relationships between weather variables
