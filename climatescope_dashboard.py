@@ -4,12 +4,12 @@
 
 
 
-#Import the libraries we need ────────────────────
+#Import the libraries needed ────────────────────
 
-import streamlit as st        # builds the web dashboard
-import pandas as pd           # reads & processes CSV data
-import numpy as np            # maths helpers (mean, std, etc.)
-import plotly.express as px   # draws beautiful interactive charts
+import streamlit as st       
+import pandas as pd
+import numpy as np
+import plotly.express as px
 
 
 #Page configuration ──────────────────────────────
