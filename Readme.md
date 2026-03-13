@@ -15,7 +15,6 @@ Author: Rachel Fernandes
 
 
 ## Milestone 2 – Core Analysis and Visualization Design
-### Project: ClimateScope – Visualizing Global Weather Trends
 
 ### Tasks Completed
 - Built an interactive Streamlit dashboard for global weather analytics
