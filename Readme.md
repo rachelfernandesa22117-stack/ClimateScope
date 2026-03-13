@@ -46,66 +46,75 @@ I will incorporate interactive filters to allow users to explore data by country
 </html>
 
 
-# ClimateScope — Milestone 3 Report
-### Visualization Development & Interactivity
+**# ClimateScope — Milestone 3 Report**
+**### Visualization Development & Interactivity**
+**Author:** Rachel Fernandes
 
-## Visualization Development
+**## Visualization Development**
 The dashboard integrates multiple visualization types to analyze climate patterns:
 
-• Choropleth world map showing **average temperature by country**  
-• Histograms for **temperature, humidity, wind speed, pressure, UV index, and visibility distributions**  
-• Seasonal trend visualizations including **monthly line charts and box plots**  
-• **Heatmaps** comparing temperature patterns across countries and months  
-• **Correlation matrix** to analyze relationships between weather variables  
-• **Scatter plots with regression trendlines** to explore pollutant and climate relationships  
-• **Violin plots** for distribution comparison between countries  
-• **Extreme weather event analysis** using percentile thresholds  
-• **Rolling average time-series analysis** to reveal long-term trends
+• Choropleth world map showing average temperature by country  
+• Histograms for temperature, humidity, wind speed, pressure, UV index, and visibility distributions  
+• Seasonal trend visualizations including monthly line charts and box plots  
+• Heatmaps comparing temperature patterns across countries and months  
+• Correlation matrix to analyze relationships between weather variables  
+• Scatter plots with regression trendlines to explore pollutant and climate relationships  
+• Violin plots for distribution comparison between countries  
+• Extreme weather event analysis using percentile thresholds  
+• Rolling average time-series analysis to reveal long-term trends
 
----
 
-## Interactive Features
+**## Interactive Features**
 The dashboard includes multiple forms of interactivity:
 
-• **Country selection filter**
-• **Month selection filter**
-• Dynamic **filter-driven chart updates**
-• **Hover-based data exploration**
-• Interactive **tabs for grouped visualizations**
-• **Collapsible filter panel**
-• Dynamic **data sampling for performance optimization**
+• Country selection filter  
+• Month selection filter  
+• Dynamic filter-driven chart updates  
+• Hover-based data exploration  
+• Interactive tabs for grouped visualizations  
+• Collapsible filter panel  
+• Dynamic data sampling for performance optimization  
 
 All visualizations automatically update when filter selections change.
 
----
 
-## Visualization Design & User Experience
+**## Visualization Design & User Experience**
 Several design improvements were implemented to enhance usability:
 
 • Consistent color themes across visualizations  
 • Clear axis labels and chart titles  
-• Styled **insight boxes** highlighting key findings  
-• Structured layout using **sections and columns**  
-• Performance optimization using **Streamlit caching**
+• Styled insight boxes highlighting key findings  
+• Structured layout using sections and columns  
+• Performance optimization using Streamlit caching  
 
----
 
-## Key Analytical Insights
+**## Key Analytical Insights**
 The dashboard automatically extracts insights from the dataset, including:
 
-• Identification of the **hottest and coldest countries**
-• Detection of **extreme weather events**
-• Analysis of **pollution levels by country**
-• Identification of **correlations between climate variables**
-• Seasonal climate patterns across months
+• Identification of the hottest and coldest countries  
+• Detection of extreme weather events  
+• Analysis of pollution levels by country  
+• Identification of correlations between climate variables  
+• Seasonal climate patterns across months  
 
----
 
-## Technologies Used
+
+**## Deliverable**
+A fully functional interactive dashboard prototype demonstrating:
+
+• Integrated visual analytics  
+• Advanced user interactivity  
+• Automated insight generation  
+• Global climate data exploration  
+
+
+
+**## Technologies Used**
 • Python  
 • Streamlit  
 • Plotly  
 • Pandas  
 • NumPy
+
 
 
