@@ -4,3 +4,9 @@ __pycache__/
 data/raw/
 data/cleaned/
 *.csv
+*.xlsx
+*.zip
+*.db
+.env
+.DS_Store
+Thumbs.db
