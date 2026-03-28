@@ -1,7 +1,3 @@
-Here is the README based strictly on your dashboard code:
-
----
-
 # ClimateScope 🌍 — Global Weather Analytics Dashboard
 
 ## Milestone 2 Overview
