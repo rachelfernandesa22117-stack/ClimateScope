@@ -339,11 +339,18 @@ plotly
 ```
 
 ### 3. Add the Dataset
-Download `GlobalWeatherRepository.csv` from [Kaggle](https://www.kaggle.com/) and place it in the project root directory. The app expects the file at the root level — if `pd.read_csv()` in `app.py` contains a hardcoded path, replace it with `"GlobalWeatherRepository.csv"` to use the project root location.
+Download `GlobalWeatherRepository.csv` from [Kaggle](https://www.kaggle.com/) and place it in the project root directory. The app expects the file at the root level — if `pd.read_csv()` in `climatescope_dashboard_M3.py` contains a hardcoded path, replace it with `"GlobalWeatherRepository.csv"` to use the project root location.
 
 ### 4. Run the Streamlit App
+
+Run either dashboard depending on the milestone you want to launch:
+
 ```bash
-streamlit run app.py
+# Milestone 2
+streamlit run dashboard_M2.py
+
+# Milestone 3 (full dashboard)
+streamlit run climatescope_dashboard_M3.py
 ```
 
 The dashboard will open automatically in your default browser at `http://localhost:8501`.
@@ -352,7 +359,7 @@ The dashboard will open automatically in your default browser at `http://localho
 
 ## Usage
 
-1. Launch the app using the command above.
+1. Launch the app using `streamlit run dashboard_M2.py` or `streamlit run climatescope_dashboard_M3.py` (see Installation Step 4).
 2. Expand the filter panel at the top of the page.
 3. Select one or more countries from the multi-select dropdown (leave empty for all countries).
 4. Select one or more months to focus on your planned work window.
@@ -370,13 +377,14 @@ The dashboard will open automatically in your default browser at `http://localho
 ```
 ClimateScope/
 |
-|-- app.py                        # Main Streamlit application (all dashboard logic)
+|-- dashboard_M2.py                # Milestone 2 Streamlit dashboard
+|-- climatescope_dashboard_M3.py   # Milestone 3 Streamlit dashboard (full)
 |-- GlobalWeatherRepository.csv   # Source dataset (not included in repo -- download separately from Kaggle)
 |-- requirements.txt              # Python dependencies
 |-- README.md                     # Project documentation
 ```
 
-**`app.py` is organised into 12 labelled sections:**
+**`climatescope_dashboard_M3.py` is organised into 12 labelled sections:**
 
 | Section | Content |
 |---|---|
@@ -390,7 +398,7 @@ ClimateScope/
 ## Limitations
 
 - **Static dataset:** No live weather data — the dashboard reflects historical readings in the CSV file only. Conditions may differ from current reality.
-- **Hardcoded file path:** The `pd.read_csv()` path may be hardcoded to a local path and must be updated to `"GlobalWeatherRepository.csv"` per user environment.
+- **Hardcoded file path:** The `pd.read_csv()` path may be hardcoded to a local path in `climatescope_dashboard_M3.py` and must be updated to `"GlobalWeatherRepository.csv"` per user environment.
 - **No time-zone handling:** All timestamps are treated as-is without timezone normalisation, which may affect cross-country time comparisons.
 - **Threshold-based classification only:** The `SAFE/CAUTION/DANGER` model uses fixed cutoffs — it does not account for combined multi-factor risk (e.g., moderate wind + moderate heat simultaneously without either breaching a threshold alone).
 - **Scatter plots are sampled:** To maintain rendering performance, scatter plots use up to 3,000 randomly sampled rows — extreme outliers may occasionally be excluded from visual display.
