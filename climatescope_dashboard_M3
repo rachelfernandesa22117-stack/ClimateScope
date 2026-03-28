@@ -480,73 +480,37 @@ st.markdown("---")
 # ============================================================
 # SECTION 05 — WIND RISK ANALYSIS
 # ============================================================
-
 st.subheader("05 · Wind Risk Analysis — Cranes, Scaffolding & Elevated Work")
 st.caption(
     f"Caution threshold: {THRESHOLDS['wind_caution']} kph  ·  "
     f"Stop-work threshold: {THRESHOLDS['wind_stop']} kph"
 )
 
-col1, col2 = st.columns(2)
-
-# ── Left: scatter plot coloured by risk level ────────────────
-with col1:
-    fig_scatter = px.scatter(
-        sample_data,
-        x="wind_kph",
-        y="pressure_mb",
-        opacity=0.4,
-        color="risk_level",
-        color_discrete_map={
-            "SAFE":    "#2a9d8f",
-            "CAUTION": "#e9c46a",
-            "DANGER":  "#e76f51"
-        },
-        title="Wind Speed vs Air Pressure",
-        labels={
-            "wind_kph":    "Wind Speed (kph)",
-            "pressure_mb": "Air Pressure (mb)"
+fig_scatter = px.scatter(
+    sample_data,
+    x="wind_kph",
+    y="pressure_mb",
+    opacity=0.4,
+    color="risk_level",
+    color_discrete_map={
+        "SAFE":    "#2a9d8f",
+        "CAUTION": "#e9c46a",
+        "DANGER":  "#e76f51"
+    },
+    title="Wind Speed vs Air Pressure",
+    labels={
+        "wind_kph":    "Wind Speed (kph)",
+        "pressure_mb": "Air Pressure (mb)"
         }
-    )
-    # Red line = stop-work wind speed
-    fig_scatter.add_vline(
-        x=THRESHOLDS["wind_stop"],
-        line_dash="dash", line_color="red",
-        annotation_text="🛑 Stop-work"
-    )
-    fig_scatter.update_layout(height=400)
-    st.plotly_chart(fig_scatter, use_container_width=True)
-
-# ── Right: count of DANGER readings by pressure band ─────────
-with col2:
-    # Keep only DANGER readings, then group them into 10 mb pressure bands
-    danger_only = sample_data[sample_data["risk_level"] == "DANGER"].copy()
-    danger_only["pressure_band"] = (
-        (danger_only["pressure_mb"] // 10 * 10)   # round down to nearest 10
-        .astype(int)
-        .astype(str) + " mb"
-    )
-
-    pressure_counts = (
-        danger_only
-        .groupby("pressure_band")
-        .size()
-        .reset_index(name="DANGER Readings")
-        .sort_values("pressure_band")
-    )
-
-    fig_pbar = px.bar(
-        pressure_counts,
-        x="pressure_band",
-        y="DANGER Readings",
-        title="DANGER Readings by Air Pressure Band",
-        labels={"pressure_band": "Pressure Band (mb)"},
-        color="DANGER Readings",
-        color_continuous_scale=["#e9c46a", "#e76f51"]
-    )
-    fig_pbar.update_layout(height=400, coloraxis_showscale=False,
-                            xaxis_tickangle=-45)
-    st.plotly_chart(fig_pbar, use_container_width=True)
+)
+# Red line = stop-work wind speed
+fig_scatter.add_vline(
+    x=THRESHOLDS["wind_stop"],
+    line_dash="dash", line_color="red",
+    annotation_text="🛑 Stop-work"
+)
+fig_scatter.update_layout(height=400)  # ← increased from 400
+st.plotly_chart(fig_scatter, use_container_width=True)
 
 danger_alert(
     "Low pressure + high wind = storm conditions. "
@@ -662,15 +626,19 @@ st.plotly_chart(fig_sw, use_container_width=True)
 
 st.write("#### Countries Most Affected by Extreme Heat (> 40°C)")
 heat_df = filtered_df[filtered_df["temperature_celsius"] >= THRESHOLDS["temp_max"]]
-heat_table = (
-    heat_df.groupby("country").size()
-    .sort_values(ascending=False).head(10).reset_index()
-)
-heat_table.columns = ["Country", "Extreme Heat Readings"]
-heat_table.index = range(1, len(heat_table) + 1)
-st.dataframe(heat_table, use_container_width=True)
 
-if not heat_table.empty:
+if heat_df.empty:
+    safe_alert("No extreme heat readings in the filtered data.")
+else:
+    heat_table = (
+        heat_df.groupby("country").size()
+        .sort_values(ascending=False).head(10).reset_index()
+    )
+    heat_table.columns = ["Country", "Extreme Heat Readings"]
+    heat_table.index = range(1, len(heat_table) + 1)
+
+    st.dataframe(heat_table, use_container_width=True)  # ← only once
+
     danger_alert(
         f"<strong>{heat_table.iloc[0]['Country']}</strong> has the most extreme heat readings "
         f"({heat_table.iloc[0]['Extreme Heat Readings']:,} records above 40°C). "
