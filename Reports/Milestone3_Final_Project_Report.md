@@ -1,7 +1,3 @@
-Here is the README with all emojis removed:
-
----
-
 # SiteGuard — Construction Weather Risk Dashboard
 
 > A data-driven Streamlit dashboard helping civil engineers and site managers schedule outdoor construction work safely — across multiple countries and seasons.
