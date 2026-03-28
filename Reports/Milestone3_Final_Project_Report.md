@@ -141,7 +141,7 @@ Non-numeric values are silently converted to `NaN` rather than raising errors.
 - Other columns retain `NaN` values and are handled gracefully in aggregations.
 
 ### 4. Risk Classification (Derived Column)
-A new column `risk_level` is created for every row using a rule-based function applied via `df.apply()`:
+A new column `risk_level` is created for every row using a rule-based function applied via `df.apply()` with a named function `classify_risk`:
 
 | Level | Trigger Conditions |
 |---|---|
@@ -173,7 +173,7 @@ Thresholds are sourced from international construction safety guidelines and cen
 | `sample()` | Random downsampling for scatter plot performance |
 
 ### Vectorized Operations
-- Risk classification is applied row-wise using `df.apply()` with a custom lambda.
+- Risk classification is applied row-wise using `df.apply()` with a named function `classify_risk`.
 - Z-scores are computed using vectorized arithmetic: `(x - x.mean()) / x.std()`.
 - IQR fences are applied using boolean masks across entire Series columns.
 
@@ -204,13 +204,13 @@ Thresholds are sourced from international construction safety guidelines and cen
 | Global Risk Map | Choropleth map (risk score + avg temperature) |
 | Seasonal Planning | Line charts (wind, temperature), bar chart (% DANGER by month) |
 | Seasonal Heatmap | Imshow heatmap (temperature by country x month) |
-| Wind Risk | Scatter plot (wind vs pressure) with stop-work threshold line |
+| Wind Risk | Plotly Express scatter with threshold lines via Graph Objects |
 | Air Quality | Histogram (PM2.5), scatter (PM2.5 vs PM10), ranked bar chart |
 | Stop-Work Tracker | Metric tiles + bar chart across 5 hazard types |
 | Statistical Analysis | Z-score histograms, skewness metrics, IQR anomaly counts |
 | Correlation Matrix | Heatmap (Pearson r values, 5 variables) |
 | Visibility & Cloud | Scatter (cloud vs visibility), histogram, violin plots by country |
-| Rolling Trend Monitor | Tabbed line charts (temperature, wind, PM2.5 rolling averages) |
+| Rolling Trend Monitor | Tabbed line charts (temperature, wind, PM2.5 30-reading rolling averages) |
 | Country Summary Table | Sortable styled table with conditional colour coding |
 
 ### User Interaction
@@ -279,7 +279,7 @@ Display Insights & Recommendations to User
 
 ### Seasonal Effects
 - Monthly DANGER percentage charts clearly reveal seasonal peaks, allowing planners to avoid scheduling concrete pours, crane lifts, and foundation work during the highest-risk months.
-- The rolling 30-reading average smooths short-term spikes and reveals whether conditions are structurally improving or deteriorating over time.
+- The 30-reading rolling average smooths short-term spikes and reveals whether conditions are structurally improving or deteriorating over time.
 
 ---
 
@@ -321,8 +321,8 @@ Display Insights & Recommendations to User
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/siteguard-dashboard.git
-cd siteguard-dashboard
+git clone https://github.com/rachelfernandesa22117-stack/ClimateScope.git
+cd ClimateScope
 ```
 
 ### 2. Install Dependencies
@@ -339,7 +339,7 @@ plotly
 ```
 
 ### 3. Add the Dataset
-Place `GlobalWeatherRepository.csv` in the project root directory, or update the file path in `app.py` where `pd.read_csv()` is called to match your local path.
+Download `GlobalWeatherRepository.csv` from [Kaggle](https://www.kaggle.com/) and place it in the project root directory. The app expects the file at the root level — if `pd.read_csv()` in `app.py` contains a hardcoded path, replace it with `"GlobalWeatherRepository.csv"` to use the project root location.
 
 ### 4. Run the Streamlit App
 ```bash
@@ -368,10 +368,10 @@ The dashboard will open automatically in your default browser at `http://localho
 ## Project Structure
 
 ```
-siteguard-dashboard/
+ClimateScope/
 |
 |-- app.py                        # Main Streamlit application (all dashboard logic)
-|-- GlobalWeatherRepository.csv   # Source dataset (not included in repo -- add locally)
+|-- GlobalWeatherRepository.csv   # Source dataset (not included in repo -- download separately from Kaggle)
 |-- requirements.txt              # Python dependencies
 |-- README.md                     # Project documentation
 ```
@@ -383,19 +383,20 @@ siteguard-dashboard/
 | CSS & Styling | Custom colour scheme, alert box styles |
 | Constants | `THRESHOLDS` dictionary, `MONTH_ORDER` list |
 | Data Loading | `load_data()` with caching and risk classification |
-| Sections 01-12 | Sequential dashboard panels (KPIs to Summary Table) |
+| Sections 01–12 | Sequential dashboard panels (KPIs to Summary Table) |
 
 ---
 
 ## Limitations
 
 - **Static dataset:** No live weather data — the dashboard reflects historical readings in the CSV file only. Conditions may differ from current reality.
-- **Hardcoded file path:** The `pd.read_csv()` path is hardcoded to a local Windows path and must be updated per user environment.
+- **Hardcoded file path:** The `pd.read_csv()` path may be hardcoded to a local path and must be updated to `"GlobalWeatherRepository.csv"` per user environment.
 - **No time-zone handling:** All timestamps are treated as-is without timezone normalisation, which may affect cross-country time comparisons.
 - **Threshold-based classification only:** The `SAFE/CAUTION/DANGER` model uses fixed cutoffs — it does not account for combined multi-factor risk (e.g., moderate wind + moderate heat simultaneously without either breaching a threshold alone).
 - **Scatter plots are sampled:** To maintain rendering performance, scatter plots use up to 3,000 randomly sampled rows — extreme outliers may occasionally be excluded from visual display.
 - **No export functionality:** Users cannot download filtered data, charts, or reports directly from the dashboard.
 - **Country name matching:** Choropleth maps rely on Plotly's `country names` location mode — countries with non-standard name formats in the dataset may not render on the map.
+- **`applymap()` deprecation:** The styled Country Summary Table (Section 12) uses `.applymap()` for conditional colour coding. This method is deprecated in pandas ≥ 2.1 and will raise a `FutureWarning`. Replace with `.map()` if running a newer pandas version.
 
 ---
 
