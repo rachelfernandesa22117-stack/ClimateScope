@@ -1,7 +1,3 @@
-Here is the README based strictly on your notebook content:
-
----
-
 # Global Weather Analysis — Milestone 1: Data Exploration & Preprocessing
 
 ## Milestone Description
