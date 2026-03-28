@@ -1,81 +1,90 @@
-## ClimateScope Project Milestones
-**Author: Rachel Fernandes**
+# SiteGuard — Construction Weather Risk Dashboard
 
+A data-driven analytics dashboard built to help civil engineers and site managers
+make weather-informed scheduling decisions for outdoor construction work.
 
+---
 
-## Milestone 1 – ClimateScope Project Submission
+## Introduction
 
-### Project Status
-- Dataset successfully downloaded
-- Data cleaned and standardized
-- Missing values inspected
-- Dataset aggregated
-- Dataset prepared for visualization using Plotly and Streamlit
+SiteGuard analyses global historical weather data to classify conditions as
+SAFE, CAUTION, or DANGER for outdoor construction activity. It translates raw
+meteorological readings — temperature, wind speed, air quality, humidity, and
+visibility — into actionable risk signals relevant to construction safety.
 
+The project addresses a practical gap: existing weather tools provide no
+construction-specific context, leaving site managers to interpret raw data
+manually. SiteGuard bridges that gap with structured risk thresholds, interactive
+visualisations, and seasonal planning tools.
 
+---
 
-## Milestone 2 – Core Analysis and Visualization Design
+## Project Structure
 
-### Tasks Completed
-- Built a Streamlit dashboard for global weather analytics
-- Loaded and cleaned the weather dataset using Pandas
-- Performed data preprocessing including date parsing, numeric conversion and missing value handling
-- Created KPI indicators for temperature, humidity, wind speed, pressure, UV index and visibility
-- Visualized global temperature using a choropleth world map
-- Built distribution charts (histograms) for major weather variables
-- Analyzed seasonal patterns with monthly wind, temperature and UV charts
-- Generated a correlation matrix and scatter plots to study relationships between variables
-- Compared regional climate patterns including hottest and coldest countries and wind distributions
-- Conducted air quality analysis for PM2.5 and PM10 pollutants
-- Detected extreme weather events using percentile thresholds
-- Implemented anomaly detection using Z-Score and IQR statistical methods
-- Analyzed visibility and cloud cover relationships
-- Built rolling average trend analysis for temperature, wind and pollution
-- Designed a multi-section analytical dashboard using Plotly visualizations
+The project is developed across three milestones, each building on the previous.
 
+| Milestone | Description |
+|---|---|
+| Milestone 1 | Data exploration, cleaning, and preprocessing of the GlobalWeatherRepository dataset |
+| Milestone 2 | Interactive Streamlit dashboard prototype with core visualisations and filtering |
+| Milestone 3 | Final dashboard with risk classification, anomaly detection, and full analytical reporting |
 
+---
 
-## Milestone 3 – Visualization Development and Interactivity
+## Milestone Reports
 
-### Visualization Development
-- Choropleth world map showing average temperature by country
-- Histograms for temperature, humidity, wind speed, pressure, UV index and visibility distributions
-- Seasonal trend visualizations including monthly line charts and box plots
-- Heatmaps comparing temperature patterns across countries and months
-- Correlation matrix to analyze relationships between weather variables
-- Scatter plots with regression trendlines to explore pollutant and climate relationships
-- Violin plots for distribution comparison between countries
-- Extreme weather event analysis using percentile thresholds
-- Rolling average time-series analysis to reveal long-term trends
+Detailed reports for each milestone are available in the repository:
 
-### Interactive Features
-- Country selection filter
-- Month selection filter
-- Dynamic filter-driven chart updates
-- Hover-based data exploration
-- Interactive tabs for grouped visualizations
-- Collapsible filter panel
-- Dynamic data sampling for performance optimization
+[View All Milestone Reports](https://github.com/rachelfernandesa22117-stack/ClimateScope/tree/main/Reports)
 
-All visualizations automatically update when filter selections change.
+---
 
-### Visualization Design and User Experience
-- Consistent color themes across visualizations
-- Clear axis labels and chart titles
-- Styled insight boxes highlighting key findings
-- Structured layout using sections and columns
-- Performance optimization using Streamlit caching
+## Tech Stack
 
-### Key Analytical Insights
-- Identification of the hottest and coldest countries
-- Detection of extreme weather events
-- Analysis of pollution levels by country
-- Identification of correlations between climate variables
-- Seasonal climate patterns across months
-
-### Technologies Used
-- Python
-- Streamlit
-- Plotly
+- Python 3.8+
 - Pandas
 - NumPy
+- Streamlit
+- Plotly Express
+
+---
+
+## How to Run the Project
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/rachelfernandesa22117-stack/ClimateScope.git
+cd ClimateScope
+```
+
+**2. Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+**3. Run the dashboard**
+
+For the Milestone 2 prototype:
+```bash
+streamlit run dashboard_M2.py
+```
+
+For the Milestone 3 final dashboard:
+```bash
+streamlit run climatescope_dashboard_M3.py
+```
+
+> Note: Place `GlobalWeatherRepository.csv` in the project root directory before
+> running either app, and update the file path in the script if required.
+
+---
+
+## Project Status
+
+This project was developed in three structured phases as part of an academic
+assessment. All three milestones are complete. The final dashboard (Milestone 3)
+represents the fully developed version of the application.
+
+---
+
+*SiteGuard — Built with Streamlit and Plotly · Rachel Fernandes · Data: GlobalWeatherRepository*
