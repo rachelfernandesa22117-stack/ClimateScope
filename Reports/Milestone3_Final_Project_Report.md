@@ -343,8 +343,6 @@ Download `GlobalWeatherRepository.csv` from [Kaggle](https://www.kaggle.com/) an
 
 ### 4. Run the Streamlit App
 
-Run either dashboard depending on the milestone you want to launch:
-
 ```bash
 # Milestone 2
 streamlit run dashboard_M2.py
@@ -359,7 +357,7 @@ The dashboard will open automatically in your default browser at `http://localho
 
 ## Usage
 
-1. Launch the app using `streamlit run dashboard_M2.py` or `streamlit run climatescope_dashboard_M3.py` (see Installation Step 4).
+1. Launch the app using `streamlit run dashboard_M2.py` (Milestone 2) or `streamlit run climatescope_dashboard_M3.py` (Milestone 3 — full dashboard).
 2. Expand the filter panel at the top of the page.
 3. Select one or more countries from the multi-select dropdown (leave empty for all countries).
 4. Select one or more months to focus on your planned work window.
