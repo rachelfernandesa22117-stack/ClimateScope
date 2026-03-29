@@ -94,7 +94,6 @@ This milestone delivers a functional, interactive Streamlit dashboard built on t
 
 ---
 
-## ```markdown
 ## Installation & Setup
 
 **Prerequisites:** Python 3.8 or higher
