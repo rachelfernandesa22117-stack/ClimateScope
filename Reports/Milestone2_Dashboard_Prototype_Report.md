@@ -94,24 +94,24 @@ This milestone delivers a functional, interactive Streamlit dashboard built on t
 
 ---
 
+## ```markdown
 ## Installation & Setup
 
 **Prerequisites:** Python 3.8 or higher
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone https://github.com/rachelfernandesa22117-stack/ClimateScope.git
+cd ClimateScope
 
 # 2. Install dependencies
 pip install streamlit pandas numpy plotly
 
 # 3. Place the dataset in the correct path
-#    Update this line in the script to match your local file path:
-#    df = pd.read_csv(r"C:\Users\...\GlobalWeatherRepository.csv")
+#    df = pd.read_csv(r"C:\Users\Dell\Downloads\GlobalWeatherRepository.csv")
 
 # 4. Run the dashboard
-streamlit run app.py
+streamlit run dashboard_M2.py
 ```
 
 The dashboard will open automatically at `http://localhost:8501`.
