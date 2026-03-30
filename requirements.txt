@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 streamlit>=1.32
 pandas>=2.0
 numpy>=1.24
 plotly>=5.20
 matplotlib>=3.7
 seaborn>=0.12
-=======
-
->>>>>>> dbd386d (Added requirements.txt for project dependencies)
-=======
-streamlit>=1.32
-pandas>=2.0
-numpy>=1.24
-plotly>=5.20
->>>>>>> 5c8e177 (Update package versions in requirements.txt)
