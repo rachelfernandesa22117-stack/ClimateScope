@@ -1,53 +1,46 @@
-# ClimateScope — Making Sense of the World's Weather
+# ClimateScope — Global Weather Analytics
+
+## Project Overview
+
+ClimateScope is a data analytics project built on the GlobalWeatherRepository
+dataset, covering weather readings from over 200 countries. The project moves
+through three structured stages — from raw data exploration to a fully interactive
+Streamlit dashboard — with the goal of turning meteorological data into clear,
+actionable visual insights.
+
+The core dashboard allows users to explore global weather patterns across
+temperature, humidity, wind speed, air quality, UV index, and visibility — all
+filterable by country and month.
+
+**Why it matters:**
+Weather data in its raw form offers limited value without structure and context.
+ClimateScope organises that data into a readable, interactive format suitable for
+researchers, analysts, and domain professionals working with large-scale
+meteorological datasets.
+
+**Real-world application:**
+The analytical foundation established in Milestone 2 directly informed the
+development of SiteGuard — a construction weather risk dashboard derived from the
+ClimateScope prototype. SiteGuard applies the same data and dashboard logic to a
+domain-specific problem: classifying every weather reading as SAFE, CAUTION, or
+DANGER for outdoor construction scheduling, and surfacing stop-work conditions
+across five hazard types. It demonstrates how a general-purpose analytics dashboard
+can be extended into a professional decision-support tool.
 
 ---
 
-## What is ClimateScope?
+## Project Structure
 
-Raw weather data is noise. ClimateScope turns it into signal.
-
-Built on the GlobalWeatherRepository dataset, ClimateScope is an interactive
-Streamlit dashboard that lets you cut through the noise and explore real
-meteorological patterns — across temperature, humidity, wind speed, air quality,
-UV index, and visibility — for any country, any month, in seconds.
-
-This is not a weather app. It is an analytics platform for people who want to
-*understand* weather, not just check it.
-
----
-
-## Why It Exists
-
-Weather data is everywhere. Meaningful weather analysis is not.
-
-ClimateScope was built to answer a simple question: what does global weather
-actually look like when you organise it properly? The answer turned out to be
-more interesting than expected — seasonal anomalies, cross-country air quality
-gaps, temperature distributions that defy intuition, and correlations that only
-become visible at scale.
-
-The project also has a real-world extension. The analytical foundation built here
-directly powered **SiteGuard** — a construction weather risk tool that classifies
-every weather reading as SAFE, CAUTION, or DANGER for outdoor work scheduling.
-One dataset. One codebase. Two completely different use cases. That is the point.
-
----
-
-## How It Was Built
-
-The project moves through three deliberate stages:
-
+The project progresses across three milestones:
 ```
-Milestone 1 — Understand the data
+Data Exploration (Milestone 1)
         |
         v
-Milestone 2 — Build the prototype
+Dashboard Prototype (Milestone 2)
         |
         v
-Milestone 3 — Ship the final dashboard
+Final Dashboard + Analysis (Milestone 3)
 ```
-
-No shortcuts. Each stage builds directly on the last.
 
 ---
 
@@ -55,25 +48,30 @@ No shortcuts. Each stage builds directly on the last.
 
 | File / Folder | Description |
 |---|---|
-| [Milestone1.ipynb](https://github.com/Bhoomika26M/ClimateScope_B13/blob/Rachel-Fernandes/Milestone1.ipynb) | Jupyter Notebook — data exploration and preprocessing |
-| [dashboard_M2.py](https://github.com/Bhoomika26M/ClimateScope_B13/blob/Rachel-Fernandes/dashboard_M2.py) | Milestone 2 — Streamlit dashboard prototype |
-| [climatescope_dashboard_M3.py](https://github.com/Bhoomika26M/ClimateScope_B13/blob/Rachel-Fernandes/climatescope_dashboard_M3.py) | Milestone 3 — Final Streamlit dashboard |
-| [Reports/](https://github.com/Bhoomika26M/ClimateScope_B13/tree/Rachel-Fernandes/Reports) | Milestone reports covering all stages of the project |
+| [Milestone1.ipynb](https://github.com/rachelfernandesa22117-stack/ClimateScope/blob/main/Milestone1.ipynb) | Jupyter Notebook — data exploration and preprocessing |
+| [dashboard_M2.py](https://github.com/rachelfernandesa22117-stack/ClimateScope/blob/main/dashboard_M2.py) | Milestone 2 — Streamlit dashboard prototype |
+| [climatescope_dashboard_M3.py](https://github.com/rachelfernandesa22117-stack/ClimateScope/blob/main/climatescope_dashboard_M3.py) | Milestone 3 — Final Streamlit dashboard |
+| [Reports/](https://github.com/rachelfernandesa22117-stack/ClimateScope/tree/main/Reports) | Milestone reports for all stages |
 
 ---
 
-## What the Dashboard Actually Shows
+## Milestone Breakdown
 
-- **Global choropleth map** — see weather patterns across countries at a glance
-- **KPI metrics** — temperature, humidity, wind, UV, visibility, air quality
-- **Seasonal trend charts** — how conditions shift month by month
-- **Anomaly detection** — Z-score flagging of statistical outliers
-- **Correlation matrix** — relationships between weather variables
-- **Air quality analysis** — pollution breakdowns by region
-- **Rolling averages** — smoothed trend lines over time
+**Milestone 1 — Data Exploration and Preprocessing**
+Initial examination of the GlobalWeatherRepository dataset using a Jupyter Notebook.
+Covers data loading, structure inspection, null value checks, feature engineering,
+normalisation, and basic statistical analysis.
 
-Every chart responds to a country and month filter applied globally across the
-entire dashboard.
+**Milestone 2 — Dashboard Prototype**
+A functional Streamlit dashboard implementing core visualisations: KPI metrics,
+a global choropleth map, distribution histograms, seasonal trend charts, a
+correlation matrix, air quality analysis, anomaly detection, and rolling averages.
+Includes country and month filtering applied globally across all sections.
+
+**Milestone 3 — Final Dashboard**
+The production-ready version of the dashboard with refined visualisations, extended
+analysis, and completed documentation. Builds directly on the Milestone 2 prototype
+with improved structure, additional sections, and a cleaner user experience.
 
 ---
 
@@ -123,7 +121,9 @@ The dashboard will open automatically in your browser at `http://localhost:8501`
 
 ---
 
-## Project Status
+## Additional Notes
+
+**Project Status**
 
 | Milestone | Status |
 |---|---|
@@ -132,6 +132,12 @@ The dashboard will open automatically in your browser at `http://localhost:8501`
 | Milestone 3 — Final Dashboard | Complete |
 | Milestone 4 — Combined Reports | Complete |
 
+This project was developed in structured phases as part of an academic data
+analytics programme. All milestone reports are available in the
+[Reports](https://github.com/rachelfernandesa22117-stack/ClimateScope/tree/main/Reports)
+folder.
+
 ---
 
-*Built by Rachel Fernandes · Powered by Streamlit and Plotly · Data: GlobalWeatherRepository*
+*ClimateScope — Built with Streamlit and Plotly · Rachel Fernandes ·
+Data: GlobalWeatherRepository*
